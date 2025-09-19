@@ -1,0 +1,380 @@
+/* css 초기화 */
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+ul, ol { list-style: none;}
+
+a { text-decoration: none; color : inherit;}
+
+h1 {
+    margin:0;
+    padding:0;
+}
+
+input {
+    border : none;
+}
+
+/* 기본 모바일 */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    min-height: 100vh;
+}
+
+/*header부분*/
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "search-area"
+    "icon-area"
+    ;
+    gap : 0.5em;
+    border-bottom: 1px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;         /* 화면 전체 가로 차지 */
+    z-index: 1000; 
+    background-color: white;
+}
+
+.logo-area { display: none;}
+
+.icon-area { 
+    grid-area : icon-area;
+    padding : 1em;
+}
+
+.icon-area > nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-area img {
+    max-height: 3em;
+}
+
+.icon-area img:hover {
+    border-bottom:2px solid black;
+}
+
+.btn-area { display: none;}
+.search-area { 
+    grid-area : search-area;
+    padding : 0.8em 0;
+}
+
+.search-mobile {
+    width: 75%;
+    margin : 0 auto;
+    padding : 0.3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 0.5em;
+    border : 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.search-desktop {
+    display: none;
+}
+
+/*메인 부분*/
+main {
+    margin-top: 165px;
+    grid-area: main;
+
+}
+
+.lodging_list_wrapper {
+    padding : 1em;
+}
+
+.lodging_card_list_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 0.2em;
+    margin-top: 1em;
+}
+
+.lodging_cardbox img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;/*카드 박스에 맞춰 이미지 크기 설정*/
+    border-radius: 0.8em;
+}
+
+.lodging_cardbox p {
+    font-size: 0.8em;
+    color : #ccc;
+}
+
+.recommend_site {
+    padding : 2em; 
+}
+
+.recommend_site h3 {
+    margin : 0 0.5em;
+    border-bottom: 1px solid black;
+}
+
+.arrow_icon {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*footer부분*/
+footer {
+    padding : 1.5em;
+    grid-area : footer;
+    background-color: #ccc;
+
+}
+
+.site_map{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap : 1em;
+}
+
+.site_map nav {
+    padding : 0.5em 0;
+    border-bottom: 1px solid black;
+}
+
+.site_map p{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.site_map nav ul li {
+    padding : 0.4em 0;
+}
+
+.other_information_wrapper{
+    padding : 0.8em 0;
+}
+
+.other_information_box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "language_box"
+    "link_icon_box"
+    "right_text"
+    "notice_link_box "
+    ;
+    gap : 0.6em;
+    border-bottom: 1px solid black;
+}
+
+.language_box { grid-area: language_box;}
+
+.language_box ul{
+    display: flex;
+    gap : 1.5em;
+}
+
+.link_icon_box { grid-area: link_icon_box;}
+
+.link_icon_box ul{
+    display: flex;
+    gap : 0.8em;
+}
+
+.link_icon_box img {
+    max-height: 1.5em;
+}
+
+.right_text { grid-area: right_text;}
+
+.notice_link_box {
+    grid-area: notice_link_box;
+    margin-bottom: 0.5em;
+}
+
+.notice_link_box ul{
+    display: flex;
+    flex-wrap: wrap; /* 화면이 좁으면 줄바꿈 */
+}
+
+.notice_link_box ul li {
+    margin-right: 0.8em;
+}
+
+.right_notice {
+    padding-top: 0.5em;
+    font-size: 0.3em;
+}
+
+/* 태블릿 */
+@media(min-width:768px){
+    header {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "logo-area icon-area btn-area"
+        "search-area search-area search-area"
+        ;
+        gap : 0.5em;
+        padding : 1em;
+    }
+
+    .logo-area {
+        grid-area: logo-area;
+        display: flex;
+    }
+
+    .logo-area img {
+        max-height: 1.5em;
+    }
+
+    .icon-area {
+        padding: 0;
+    }
+
+    .btn-area {
+        grid-area: btn-area;  
+        display: flex;
+        justify-content: flex-end;
+        gap : 1em;
+    }
+
+    .btn-area button{
+        min-width: 3em;
+        max-height: 3em;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        background-color: #ccc;
+    }
+
+    .btn-area button:hover {
+        background-color: gray;
+        color : white;
+    }
+
+    .search-area {
+        padding : 0;
+    }
+
+    .search-area-wrappper {
+        padding: 0.8em;
+        border:1px solid gray;
+        border-radius: 2em;
+        box-shadow: 2px 3px 15px 0  rgba(0, 0, 0, 0.2);
+    }
+
+    .search-mobile {
+        display: none;
+    }
+
+    .search-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap : 0.2em;
+    }
+
+    .form-rows{
+        flex: 1; /* 자동으로 같은 비율 차지 */
+        min-width: 0; /* flex item이 넘치지 않게 */
+        padding-right: 0.5em;
+        border-right:1px solid #ccc;
+    }
+
+    .form-rows:nth-child(4) {
+        border-right:none;
+    }
+
+    .form-rows label {
+        font-size: 0.8em;
+    }
+    
+    .form-rows input {
+        max-width: 100%;
+        font-size: 1em;
+    }
+    
+    .search-btn {
+        margin-left: 0.3em;
+        padding : 0.2em;
+        background-color: red;
+        border : none;
+        border-radius: 50%;
+    }
+    
+    .search-btn img {
+        max-width: 2em;
+    }
+
+    /*메인부분*/
+    .lodging_card_list_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 1em;
+    }
+
+    /*footer부분*/
+    .site_map{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1em 0;
+    }
+
+    .site_map nav {
+        padding : 0;
+        border-bottom: none;
+    }
+
+    .site_map nav ul li {
+        font-size: 0.5em;
+    }
+
+    .other_information_box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "language_box link_icon_box"
+        "right_text right_text"
+        "notice_link_box notice_link_box"
+        ;
+    }
+
+    .link_icon_box ul{
+        justify-content: flex-end;
+        gap : 1em;
+    }
+}
+
+/* 데스크탑 */
+@media(min-width:1024px){
+    .lodging_card_list_wrapper {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6em;
+        margin-top: 1em;
+    }
+    .site_map nav ul li {
+        font-size: 0.7em;
+    }
+    .other_information_box {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "right_text notice_link_box language_box link_icon_box"
+        ;
+        gap:0.8em;
+    }
+}

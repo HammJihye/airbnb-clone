@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/airbnb.css">
+    <title>클론 코딩</title>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <h1><!--로고 부분(데스크탑만 적용)-->
+                <a href=""><img src="img/airbnb_Logo.png" alt="에어비앤비 로고"></a>
+            </h1>
+        </div>
+        <div class="icon-area">
+            <nav>
+                <ul>
+                    <li><a href=""><img src="img/lodging_img.png" alt="숙소 아이콘 이미지"></a></li>
+                    <li><a href=""><img src="img/activity_img.png" alt="활동 아이콘 이미지"></a></li>
+                    <li><a href=""><img src="img/service_img.png" alt="서비스 아이콘 이미지"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="btn-area"><!-- 버튼 부분(데스크탑만 적용) -->
+            <button>☰</button>
+            <button>ꕤ</button>
+        </div>
+        <div class="search-area"><!--검색창-->
+            <div class="search-area-wrappper">
+                <form action="">
+                    <div class="search-mobile">
+                        <img src="img/search_icon.png" alt="검색 아이콘 이미지">
+                        <input type="text" placeholder="검색을 시작해보세요">
+                    </div>
+                    <div class="search-desktop">
+                        <div class="form-rows">
+                            <label for="destination">여행지</label>
+                            <input type="text" id="destination" placeholder="여행지 검색">
+                        </div>
+                        <div class="form-rows">
+                            <label for="check_in_date">체크인</label>
+                        <input type="text" id="check_in_date" placeholder="날짜 추가">
+                        </div>
+                        <div class="form-rows">
+                            <label for="check_out_date">체크아웃</label>
+                            <input type="text" id="check_out_date" placeholder="날짜 추가">
+                        </div>
+                        <div class="form-rows">
+                            <label for="guest">여행자</label>
+                            <input type="text" id="guest" placeholder="게스트 추가">
+                        </div>
+                        <button class="search-btn">
+                            <img src="img/search_icon.png" alt="검색 아이콘 이미지">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="lodging_list_wrapper"><!-- 숙소 리스트 -->
+            <h2>부산의 인기 숙소</h2>
+            <!-- 모바일 2열, 태블릿 4열, 데스크탑 6열-->
+             <div class="lodging_card_list_wrapper">
+                <article class="lodging_cardbox"><!-- 숙소 리스트 카드 박스-->
+                    <a href="">
+                        <img src="img/lodging1.png" alt="부산의 아파트 이미지">
+                        <h3>부산의 아파트</h3>
+                        <p>4월 17일 ~ 19일</p>
+                        <p>125,530원</p>
+                    </a>
+                </article>
+                <article class="lodging_cardbox">
+                    <a href="">
+                        <img src="img/lodging2.png" alt="부산의 호텔 이미지">
+                        <h3>부산의 호텔</h3>
+                        <p>4월 17일 ~ 19일</p>
+                        <p>125,530원</p>
+                    </a>
+                </article>
+                <article class="lodging_cardbox">
+                    <a href="">
+                        <img src="img/lodging3.png" alt="동래구 아파트 이미지">
+                        <h3>동래구 아파트</h3>
+                        <p>4월 17일 ~ 19일</p>
+                        <p>125,530원</p>
+                    </a>
+                </article>
+                <article class="lodging_cardbox">
+                    <a href="">
+                        <img src="img/lodging4.png" alt="광안리 아파트 이미지">
+                        <h3>광안리 아파트</h3>
+                        <p>4월 17일 ~ 19일</p>
+                        <p>125,530원</p>
+                    </a>
+                </article>
+                <article class="lodging_cardbox">
+                    <a href="">
+                        <img src="img/lodging5.png" alt="오크홀름 아파트 이미지">
+                        <h3>오크홀름 아파트</h3>
+                        <p>4월 17일 ~ 19일</p>
+                        <p>125,530원</p>
+                    </a>
+                </article>
+                <article class="lodging_cardbox">
+                    <a href="">
+                        <img src="img/lodging6.png" alt="수영구 아파트 이미지">
+                        <h3>수영구 아파트</h3>
+                        <p>4월 17일 ~ 19일</p>
+                        <p>125,530원</p>
+                    </a>
+                </article>
+             </div>
+        </section>
+        <section class="recommend_site"><!--추천 여행지 -->
+            <h3>다음 여행을 위한 추천 여행지</h3>
+            <div class="arrow_icon">
+                <a href="">≪</a>
+                <a href="">≫</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="site_map"><!--사이트 맵 구역(모바일 1열, 태블릿&데스크탑 3열)-->
+            <nav>
+                <p>에어비앤비 지원</p>
+                <ul>
+                    <li><a href="">도움말 센터</a></li>
+                    <li><a href="">안전 문제 관련 도움받기</a></li>
+                    <li><a href="">에어커버</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p>호스팅</p>
+                <ul>
+                    <li><a href="">당신의 공간을 에어비앤비하세요</a></li>
+                    <li><a href="">에어비앤비에서 체험 호스팅하기</a></li>
+                    <li><a href="">에어비앤비에서 서비스 호스팅하기</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p>에어비앤비</p>
+                <ul>
+                    <li><a href="">2025 여름 업그레이드</a></li>
+                    <li><a href="">뉴스룸</a></li>
+                    <li><a href="">채용정보</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="other_information_wrapper"><!-- 저작권 등-->
+            <div class="other_information_box">
+                <nav class="language_box"><!-- 외국어 지원, 원화 부분-->
+                    <ul>
+                        <li><a href="">한국어</a></li>
+                        <li><a href="">$</a></li>
+                    </ul>
+                </nav>
+                <nav class="link_icon_box"><!--footer 아이콘 부분-->
+                    <ul>
+                        <li><a href=""><img src="img/facebook_logo.png" alt="페이스북 로고"></a></li>
+                        <li><a href=""><img src="img/twitter_logo.png" alt="트위터 로고"></a></li>
+                    </ul>
+                </nav>
+                <p class="right_text">© 2025 Airbnb, Inc.</p>
+                <nav class="notice_link_box"><!--안내 관련 링크-->
+                    <ul>
+                        <li>개인정보 처리방침</li>
+                        <li>쿠키정책</li>
+                        <li>이용약관</li>
+                        <li>사이트맵</li>
+                        <li>한국에 변경된 환불 정책</li>
+                        <li>회사 세부정보</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right_notice"><!-- 마지막 부분 저작권 관련 안내-->
+                <p>웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 8 Hanover Quay Dublin 2, D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호: IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트, 080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 에어비앤비는 통신판매 중개자로 에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다. 에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당 서비스를 제공하는 호스트에게 있습니다.</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
